@@ -1,0 +1,41 @@
+<br>
+<br>
+<div class="card">
+	<span class="title text">Content to help you with your college curricullum</span>
+	<br>
+	<mat-accordion>
+		<mat-expansion-panel *ngFor="let sem of sems">
+			<mat-expansion-panel-header>
+				<mat-panel-title>
+					{{sem.year}}
+				</mat-panel-title>
+				<mat-panel-description>
+					{{sem.sem}}
+				</mat-panel-description>
+			</mat-expansion-panel-header>
+			<div class = "content">
+				<mat-accordion>
+					<mat-expansion-panel *ngFor="let subject of sem.subs; let i = index" [attr.data-index] = "i">
+						<mat-expansion-panel-header>
+							<mat-panel-title>
+								 {{subject}}
+							</mat-panel-title>
+						</mat-expansion-panel-header>
+						<div>
+							<div class="content" *ngFor="let book of sem.books[i]">
+								<img src="assets/book-prev/{{book.prev}}.jpg"> 
+								<div class="content">
+									<h3 [innerHTML] = book.desp></h3><br>
+									<a mat-raised-button href="{{book.link}}" target="_blank" color="primary"> Buy </a>
+									<a mat-raised-button href="{{book.pdf}}" target="_blank" color="primary"> Pdf <font *ngIf="show">Download!</font> </a>
+									<br>
+								</div>
+							</div>
+						</div>
+					</mat-expansion-panel>
+				</mat-accordion>
+			</div>
+		</mat-expansion-panel>
+	</mat-accordion>
+</div>
+

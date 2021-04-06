@@ -1,0 +1,14 @@
+<mat-toolbar>
+	<div *ngIf="show">
+		<button class="left notif-btn" [routerLink]="['/curriculum']"><span class="material-icons" >local_library</span>Curicullum</button>
+		<a href="./ds-visuals/"><button class="left notif-btn"><span class="material-icons" >bubble_chart</span>DS</button></a>
+		<button class="left notif-btn" [routerLink]="['/interview']"><span class="material-icons" >meeting_room</span>Interview</button>
+	</div>
+	<div class="fill">
+		<p class="text-center center" >{{title}}</p>
+	</div>
+	<button class="right notif-btn" [routerLink]="['/home']"><span class="material-icons">home</span>Home</button>
+	<button class="right notif-btn" [routerLink]="['/blog']"><span class="material-icons">comment</span>Blog</button>
+	<a *ngIf="show" href="https://jntuhceh.ac.in/"><button class="right notif-btn"><span class="material-icons">language</span>JNTUHCEH</button></a>
+</mat-toolbar>
+<router-outlet></router-outlet>

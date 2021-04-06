@@ -1,0 +1,43 @@
+mat-toolbar{
+	background-color: #1E88E5;
+	color: white;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  	font-family: "Poppins", sans-serif;
+  	align-items: center;
+  	position: sticky;
+    position: -webkit-sticky; /* For macOS/iOS Safari */
+    top: 0; /* Sets the sticky toolbar to be on top */
+    z-index: 1000;
+}
+.fill{
+	flex: 1 1 auto;
+}
+
+.center{
+	margin: 0 auto;
+}
+
+.right{
+	margin-right: 10px;
+	float: right; 
+}
+
+.left{
+  margin-left: 10px;
+  float: left; 
+}
+
+.notif-btn{
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: white;
+}
+
+.notif-btn:hover{
+	color: #d3d3d3;
+}
+
+.notif-btn:focus {
+	outline:0;
+}

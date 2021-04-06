@@ -1,0 +1,387 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "ds-visualisations": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/ds-visualisations",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.app.json",
+            "aot": true,
+            "assets": [
+                    
+              //main
+              { "glob": "*.html", "input": "src/ds-visuals/", "output": "/ds-visuals/" },
+              { "glob": "*.js", "input": "src/ds-visuals/", "output": "/ds-visuals/" },
+              { "glob": "*.css", "input": "src/ds-visuals/", "output": "/ds-visuals/" },
+              { "glob": "*.html", "input": "src/ds-visuals/documentation", "output": "/ds-visuals/documentation" },
+              { "glob": "*.png", "input": "src/ds-visuals/images", "output": "/ds-visuals/images" },
+
+              //mobile
+              { "glob": "*.html", "input": "src/ds-visuals/mobile", "output": "/ds-visuals/mobile" },
+              { "glob": "*.css", "input": "src/ds-visuals/mobile", "output": "/ds-visuals/mobile" },
+              { "glob": "*.js", "input": "src/ds-visuals/mobile", "output": "/ds-visuals/mobile" },
+
+              //editor
+              { "glob": "*.html", "input": "src/ds-visuals/editor", "output": "/ds-visuals/editor" },
+              { "glob": "*.css", "input": "src/ds-visuals/editor", "output": "/ds-visuals/editor" },
+              { "glob": "*.js", "input": "src/ds-visuals/editor", "output": "/ds-visuals/editor" },
+              { "glob": "*.js", "input": "src/ds-visuals/editor/src-min", "output": "/ds-visuals/editor/src-min" },
+
+              //quick-sort
+              { "glob": "*.html", "input": "src/ds-visuals/quick-sort", "output": "/ds-visuals/quick-sort" },
+              { "glob": "*.css", "input": "src/ds-visuals/quick-sort", "output": "/ds-visuals/quick-sort" },
+              { "glob": "*.js", "input": "src/ds-visuals/quick-sort", "output": "/ds-visuals/quick-sort" },
+
+              { "glob": "*.html", "input": "src/ds-visuals/quick-sort/code", "output": "/ds-visuals/quick-sort/code" },
+              { "glob": "*.c", "input": "src/ds-visuals/quick-sort/code", "output": "/ds-visuals/quick-sort/code" },
+              { "glob": "*.java", "input": "src/ds-visuals/quick-sort/code", "output": "/ds-visuals/quick-sort/code" },
+              { "glob": "*.py", "input": "src/ds-visuals/quick-sort/code", "output": "/ds-visuals/quick-sort/code" },
+
+              //stack
+              { "glob": "*.html", "input": "src/ds-visuals/stack", "output": "/ds-visuals/stack" },
+              { "glob": "*.css", "input": "src/ds-visuals/stack", "output": "/ds-visuals/stack" },
+              { "glob": "*.js", "input": "src/ds-visuals/stack", "output": "/ds-visuals/stack" },
+
+              { "glob": "*.html", "input": "src/ds-visuals/stack/code", "output": "/ds-visuals/stack/code" },
+              { "glob": "*.c", "input": "src/ds-visuals/stack/code", "output": "/ds-visuals/stack/code" },
+              { "glob": "*.java", "input": "src/ds-visuals/stack/code", "output": "/ds-visuals/stack/code" },
+              { "glob": "*.py", "input": "src/ds-visuals/stack/code", "output": "/ds-visuals/stack/code" },
+
+              { "glob": "*.html", "input": "src/ds-visuals/stack/application/evaluation/", "output": "/ds-visuals/stack/application/evaluation/" },
+              { "glob": "*.css", "input": "src/ds-visuals/stack/application/evaluation/", "output": "/ds-visuals/stack/application/evaluation/" },
+              { "glob": "*.js", "input": "src/ds-visuals/stack/application/evaluation/", "output": "/ds-visuals/stack/application/evaluation/" },
+              { "glob": "*.html", "input": "src/ds-visuals/stack/application/evaluation/code/", "output": "/ds-visuals/stack/application/evaluation/code/" },
+             
+              { "glob": "*.html", "input": "src/ds-visuals/stack/application/inToPost/", "output": "/ds-visuals/stack/application/inToPost/" },
+              { "glob": "*.css", "input": "src/ds-visuals/stack/application/inToPost/", "output": "/ds-visuals/stack/application/inToPost/" },
+              { "glob": "*.js", "input": "src/ds-visuals/stack/application/inToPost/", "output": "/ds-visuals/stack/application/inToPost/" },
+
+              { "glob": "*.html", "input": "src/ds-visuals/stack/application/inToPost/code/", "output": "/ds-visuals/stack/application/inToPost/code/" },
+              { "glob": "*.c", "input": "src/ds-visuals/stack/application/inToPost/code/", "output": "/ds-visuals/stack/application/inToPost/code/" },
+              { "glob": "*.java", "input": "src/ds-visuals/stack/application/inToPost/code/", "output": "/ds-visuals/stack/application/inToPost/code/" },
+              { "glob": "*.py", "input": "src/ds-visuals/stack/application/inToPost/code/", "output": "/ds-visuals/stack/application/inToPost/code/" },
+
+              //binary search
+              { "glob": "*.html", "input": "src/ds-visuals/binary-search", "output": "/ds-visuals/binary-search" },
+              { "glob": "*.css", "input": "src/ds-visuals/binary-search", "output": "/ds-visuals/binary-search" },
+              { "glob": "*.js", "input": "src/ds-visuals/binary-search", "output": "/ds-visuals/binary-search" },
+
+              { "glob": "*.html", "input": "src/ds-visuals/binary-search/code", "output": "/ds-visuals/binary-search/code" },
+              { "glob": "*.c", "input": "src/ds-visuals/binary-search/code", "output": "/ds-visuals/binary-search/code" },
+              { "glob": "*.java", "input": "src/ds-visuals/binary-search/code", "output": "/ds-visuals/binary-search/code" },
+              { "glob": "*.py", "input": "src/ds-visuals/binary-search/code", "output": "/ds-visuals/binary-search/code" },
+
+              //queue
+              { "glob": "*.html", "input": "src/ds-visuals/queue", "output": "/ds-visuals/queue" },
+              { "glob": "*.css", "input": "src/ds-visuals/queue", "output": "/ds-visuals/queue" },
+              { "glob": "*.js", "input": "src/ds-visuals/queue", "output": "/ds-visuals/queue" },
+
+              { "glob": "*.html", "input": "src/ds-visuals/queue/code", "output": "/ds-visuals/queue/code" },
+              { "glob": "*.c", "input": "src/ds-visuals/queue/code", "output": "/ds-visuals/queue/code" },
+              { "glob": "*.java", "input": "src/ds-visuals/queue/code", "output": "/ds-visuals/queue/code" },
+              { "glob": "*.py", "input": "src/ds-visuals/queue/code", "output": "/ds-visuals/queue/code" },
+
+              //tree
+              { "glob": "*.html", "input": "src/ds-visuals/tree", "output": "/ds-visuals/tree" },
+              { "glob": "*.css", "input": "src/ds-visuals/tree", "output": "/ds-visuals/tree" },
+              { "glob": "*.js", "input": "src/ds-visuals/tree", "output": "/ds-visuals/tree" },
+
+              { "glob": "*.html", "input": "src/ds-visuals/tree/code", "output": "/ds-visuals/tree/code" },
+              { "glob": "*.c", "input": "src/ds-visuals/tree/code", "output": "/ds-visuals/tree/code" },
+              { "glob": "*.java", "input": "src/ds-visuals/tree/code", "output": "/ds-visuals/tree/code" },
+              { "glob": "*.py", "input": "src/ds-visuals/tree/code", "output": "/ds-visuals/tree/code" },
+
+              //max heap
+              { "glob": "*.html", "input": "src/ds-visuals/max-heap", "output": "/ds-visuals/max-heap" },
+              { "glob": "*.js", "input": "src/ds-visuals/max-heap", "output": "/ds-visuals/max-heap" },
+              { "glob": "*.css", "input": "src/ds-visuals/max-heap", "output": "/ds-visuals/max-heap" },
+
+              { "glob": "*.html", "input": "src/ds-visuals/max-heap/code", "output": "/ds-visuals/max-heap/code" },
+              { "glob": "*.c", "input": "src/ds-visuals/max-heap/code", "output": "/ds-visuals/max-heap/code" },
+              { "glob": "*.java", "input": "src/ds-visuals/max-heap/code", "output": "/ds-visuals/max-heap/code" },
+              { "glob": "*.py", "input": "src/ds-visuals/max-heap/code", "output": "/ds-visuals/max-heap/code" },
+
+              { "glob": "*.html", "input": "src/ds-visuals/max-heap/application/heap-sort", "output": "/ds-visuals/max-heap/application/heap-sort" },
+              { "glob": "*.js", "input": "src/ds-visuals/max-heap/application/heap-sort", "output": "/ds-visuals/max-heap/application/heap-sort" },
+              { "glob": "*.css", "input": "src/ds-visuals/max-heap/application/heap-sort", "output": "/ds-visuals/max-heap/application/heap-sort" },
+
+              { "glob": "*.html", "input": "src/ds-visuals/max-heap/application/heap-sort/code", "output": "/ds-visuals/max-heap/application/heap-sort/code" },
+              { "glob": "*.c", "input": "src/ds-visuals/max-heap/application/heap-sort/code", "output": "/ds-visuals/max-heap/application/heap-sort/code" },
+              { "glob": "*.java", "input": "src/ds-visuals/max-heap/application/heap-sort/code", "output": "/ds-visuals/max-heap/application/heap-sort/code" },
+              { "glob": "*.py", "input": "src/ds-visuals/max-heap/application/heap-sort/code", "output": "/ds-visuals/max-heap/application/heap-sort/code" },
+
+              //min heap
+              { "glob": "*.html", "input": "src/ds-visuals/min-heap", "output": "/ds-visuals/min-heap" },
+              { "glob": "*.css", "input": "src/ds-visuals/min-heap", "output": "/ds-visuals/min-heap" },
+              { "glob": "*.js", "input": "src/ds-visuals/min-heap", "output": "/ds-visuals/min-heap" }, 
+
+              { "glob": "*.html", "input": "src/ds-visuals/min-heap/code", "output": "/ds-visuals/min-heap/code" },
+              { "glob": "*.c", "input": "src/ds-visuals/min-heap/code", "output": "/ds-visuals/min-heap/code" },
+              { "glob": "*.java", "input": "src/ds-visuals/min-heap/code", "output": "/ds-visuals/min-heap/code" },
+              { "glob": "*.py", "input": "src/ds-visuals/min-heap/code", "output": "/ds-visuals/min-heap/code" },
+
+              { "glob": "*.html", "input": "src/ds-visuals/min-heap/application/heap-sort", "output": "/ds-visuals/min-heap/application/heap-sort" },
+              { "glob": "*.js", "input": "src/ds-visuals/min-heap/application/heap-sort", "output": "/ds-visuals/min-heap/application/heap-sort" },
+              { "glob": "*.css", "input": "src/ds-visuals/min-heap/application/heap-sort", "output": "/ds-visuals/min-heap/application/heap-sort" },
+
+              { "glob": "*.html", "input": "src/ds-visuals/min-heap/application/heap-sort/code", "output": "/ds-visuals/min-heap/application/heap-sort/code" },
+              { "glob": "*.c", "input": "src/ds-visuals/min-heap/application/heap-sort/code", "output": "/ds-visuals/min-heap/application/heap-sort/code" },
+              { "glob": "*.java", "input": "src/ds-visuals/min-heap/application/heap-sort/code", "output": "/ds-visuals/min-heap/application/heap-sort/code" },
+              { "glob": "*.py", "input": "src/ds-visuals/min-heap/application/heap-sort/code", "output": "/ds-visuals/min-heap/application/heap-sort/code" },
+
+              //snippets
+              { "glob": "*.c", "input": "src/ds-visuals/snippets/binary-search", "output": "/snippets/binary-search" }, 
+              { "glob": "*.java", "input": "src/ds-visuals/snippets/binary-search", "output": "/snippets/binary-search" }, 
+              { "glob": "*.py", "input": "src/ds-visuals/snippets/binary-search", "output": "/snippets/binary-search" }, 
+
+              { "glob": "*.c", "input": "src/ds-visuals/snippets/max-heap", "output": "/snippets/max-heap" }, 
+              { "glob": "*.java", "input": "src/ds-visuals/snippets/max-heap", "output": "/snippets/max-heap" }, 
+              { "glob": "*.py", "input": "src/ds-visuals/snippets/max-heap", "output": "/snippets/max-heap" }, 
+
+              { "glob": "*.c", "input": "src/ds-visuals/snippets/min-heap", "output": "/snippets/min-heap" }, 
+              { "glob": "*.java", "input": "src/ds-visuals/snippets/min-heap", "output": "/snippets/min-heap" }, 
+              { "glob": "*.py", "input": "src/ds-visuals/snippets/min-heap", "output": "/snippets/min-heap" },
+
+              { "glob": "*.c", "input": "src/ds-visuals/snippets/queue", "output": "/snippets/queue" }, 
+              { "glob": "*.java", "input": "src/ds-visuals/snippets/queue", "output": "/snippets/queue" }, 
+              { "glob": "*.py", "input": "src/ds-visuals/snippets/queue", "output": "/snippets/queue" },
+
+              { "glob": "*.c", "input": "src/ds-visuals/snippets/stack", "output": "/snippets/stack" }, 
+              { "glob": "*.java", "input": "src/ds-visuals/snippets/stack", "output": "/snippets/stack" }, 
+              { "glob": "*.py", "input": "src/ds-visuals/snippets/stack", "output": "/snippets/stack" }, 
+
+              { "glob": "*.c", "input": "src/ds-visuals/snippets/tree", "output": "/snippets/tree" }, 
+              { "glob": "*.java", "input": "src/ds-visuals/snippets/tree", "output": "/snippets/tree" }, 
+              { "glob": "*.py", "input": "src/ds-visuals/snippets/tree", "output": "/snippets/tree" },
+
+              { "glob": "*.c", "input": "src/ds-visuals/snippets/quick-sort", "output": "/snippets/quick-sort" }, 
+              { "glob": "*.java", "input": "src/ds-visuals/snippets/quick-sort", "output": "/snippets/quick-sort" }, 
+              { "glob": "*.py", "input": "src/ds-visuals/snippets/quick-sort", "output": "/snippets/quick-sort" }, 
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ds-visualisations:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ds-visualisations:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ds-visualisations:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.spec.json",
+            "karmaConfig": "karma.conf.js",
+            "assets": [
+				      //main
+              { "glob": "*.html", "input": "src/ds-visuals/", "output": "/ds-visuals/" },
+              { "glob": "*.js", "input": "src/ds-visuals/", "output": "/ds-visuals/" },
+              { "glob": "*.css", "input": "src/ds-visuals/", "output": "/ds-visuals/" },
+              { "glob": "*.html", "input": "src/ds-visuals/documentation", "output": "/ds-visuals/documentation" },
+              { "glob": "*.png", "input": "src/ds-visuals/images", "output": "/ds-visuals/images" },
+
+              //stack
+              { "glob": "*.html", "input": "src/ds-visuals/stack", "output": "/ds-visuals/stack" },
+              { "glob": "*.css", "input": "src/ds-visuals/stack", "output": "/ds-visuals/stack" },
+              { "glob": "*.js", "input": "src/ds-visuals/stack", "output": "/ds-visuals/stack" },
+
+              { "glob": "*.html", "input": "src/ds-visuals/stack/code", "output": "/ds-visuals/stack/code" },
+              { "glob": "*.c", "input": "src/ds-visuals/stack/code", "output": "/ds-visuals/stack/code" },
+              { "glob": "*.java", "input": "src/ds-visuals/stack/code", "output": "/ds-visuals/stack/code" },
+              { "glob": "*.py", "input": "src/ds-visuals/stack/code", "output": "/ds-visuals/stack/code" },
+
+              { "glob": "*.html", "input": "src/ds-visuals/stack/application/evaluation/", "output": "/ds-visuals/stack/application/evaluation/" },
+              { "glob": "*.css", "input": "src/ds-visuals/stack/application/evaluation/", "output": "/ds-visuals/stack/application/evaluation/" },
+              { "glob": "*.js", "input": "src/ds-visuals/stack/application/evaluation/", "output": "/ds-visuals/stack/application/evaluation/" },
+              { "glob": "*.html", "input": "src/ds-visuals/stack/application/evaluation/code/", "output": "/ds-visuals/stack/application/evaluation/code/" },
+             
+              { "glob": "*.html", "input": "src/ds-visuals/stack/application/inToPost/", "output": "/ds-visuals/stack/application/inToPost/" },
+              { "glob": "*.css", "input": "src/ds-visuals/stack/application/inToPost/", "output": "/ds-visuals/stack/application/inToPost/" },
+              { "glob": "*.js", "input": "src/ds-visuals/stack/application/inToPost/", "output": "/ds-visuals/stack/application/inToPost/" },
+              { "glob": "*.html", "input": "src/ds-visuals/stack/application/inToPost/code/", "output": "/ds-visuals/stack/application/inToPost/code/" },
+
+              //binary search
+              { "glob": "*.html", "input": "src/ds-visuals/binary-search", "output": "/ds-visuals/binary-search" },
+              { "glob": "*.css", "input": "src/ds-visuals/binary-search", "output": "/ds-visuals/binary-search" },
+              { "glob": "*.js", "input": "src/ds-visuals/binary-search", "output": "/ds-visuals/binary-search" },
+
+              { "glob": "*.html", "input": "src/ds-visuals/binary-search/code", "output": "/ds-visuals/binary-search/code" },
+              { "glob": "*.c", "input": "src/ds-visuals/binary-search/code", "output": "/ds-visuals/binary-search/code" },
+              { "glob": "*.java", "input": "src/ds-visuals/binary-search/code", "output": "/ds-visuals/binary-search/code" },
+              { "glob": "*.py", "input": "src/ds-visuals/binary-search/code", "output": "/ds-visuals/binary-search/code" },
+
+              //queue
+              { "glob": "*.html", "input": "src/ds-visuals/queue", "output": "/ds-visuals/queue" },
+              { "glob": "*.css", "input": "src/ds-visuals/queue", "output": "/ds-visuals/queue" },
+              { "glob": "*.js", "input": "src/ds-visuals/queue", "output": "/ds-visuals/queue" },
+
+              { "glob": "*.html", "input": "src/ds-visuals/queue/code", "output": "/ds-visuals/queue/code" },
+              { "glob": "*.c", "input": "src/ds-visuals/queue/code", "output": "/ds-visuals/queue/code" },
+              { "glob": "*.java", "input": "src/ds-visuals/queue/code", "output": "/ds-visuals/queue/code" },
+              { "glob": "*.py", "input": "src/ds-visuals/queue/code", "output": "/ds-visuals/queue/code" },
+
+              //tree
+              { "glob": "*.html", "input": "src/ds-visuals/tree", "output": "/ds-visuals/tree" },
+              { "glob": "*.css", "input": "src/ds-visuals/tree", "output": "/ds-visuals/tree" },
+              { "glob": "*.js", "input": "src/ds-visuals/tree", "output": "/ds-visuals/tree" },
+
+              { "glob": "*.html", "input": "src/ds-visuals/tree/code", "output": "/ds-visuals/tree/code" },
+              { "glob": "*.c", "input": "src/ds-visuals/tree/code", "output": "/ds-visuals/tree/code" },
+              { "glob": "*.java", "input": "src/ds-visuals/tree/code", "output": "/ds-visuals/tree/code" },
+              { "glob": "*.py", "input": "src/ds-visuals/tree/code", "output": "/ds-visuals/tree/code" },
+
+              //max heap
+              { "glob": "*.html", "input": "src/ds-visuals/max-heap", "output": "/ds-visuals/max-heap" },
+              { "glob": "*.js", "input": "src/ds-visuals/max-heap", "output": "/ds-visuals/max-heap" },
+              { "glob": "*.css", "input": "src/ds-visuals/max-heap", "output": "/ds-visuals/max-heap" },
+
+              { "glob": "*.html", "input": "src/ds-visuals/max-heap/code", "output": "/ds-visuals/max-heap/code" },
+              { "glob": "*.c", "input": "src/ds-visuals/max-heap/code", "output": "/ds-visuals/max-heap/code" },
+              { "glob": "*.java", "input": "src/ds-visuals/max-heap/code", "output": "/ds-visuals/max-heap/code" },
+              { "glob": "*.py", "input": "src/ds-visuals/max-heap/code", "output": "/ds-visuals/max-heap/code" },
+
+              { "glob": "*.html", "input": "src/ds-visuals/max-heap/application/heap-sort", "output": "/ds-visuals/max-heap/application/heap-sort" },
+              { "glob": "*.js", "input": "src/ds-visuals/max-heap/application/heap-sort", "output": "/ds-visuals/max-heap/application/heap-sort" },
+              { "glob": "*.css", "input": "src/ds-visuals/max-heap/application/heap-sort", "output": "/ds-visuals/max-heap/application/heap-sort" },
+
+              { "glob": "*.html", "input": "src/ds-visuals/max-heap/application/heap-sort/code", "output": "/ds-visuals/max-heap/application/heap-sort/code" },
+              { "glob": "*.c", "input": "src/ds-visuals/max-heap/application/heap-sort/code", "output": "/ds-visuals/max-heap/application/heap-sort/code" },
+              { "glob": "*.java", "input": "src/ds-visuals/max-heap/application/heap-sort/code", "output": "/ds-visuals/max-heap/application/heap-sort/code" },
+              { "glob": "*.py", "input": "src/ds-visuals/max-heap/application/heap-sort/code", "output": "/ds-visuals/max-heap/application/heap-sort/code" },
+
+              //min heap
+              { "glob": "*.html", "input": "src/ds-visuals/min-heap", "output": "/ds-visuals/min-heap" },
+              { "glob": "*.css", "input": "src/ds-visuals/min-heap", "output": "/ds-visuals/min-heap" },
+              { "glob": "*.js", "input": "src/ds-visuals/min-heap", "output": "/ds-visuals/min-heap" }, 
+
+              { "glob": "*.html", "input": "src/ds-visuals/min-heap/code", "output": "/ds-visuals/min-heap/code" },
+              { "glob": "*.c", "input": "src/ds-visuals/min-heap/code", "output": "/ds-visuals/min-heap/code" },
+              { "glob": "*.java", "input": "src/ds-visuals/min-heap/code", "output": "/ds-visuals/min-heap/code" },
+              { "glob": "*.py", "input": "src/ds-visuals/min-heap/code", "output": "/ds-visuals/min-heap/code" },
+
+              { "glob": "*.html", "input": "src/ds-visuals/min-heap/application/heap-sort", "output": "/ds-visuals/min-heap/application/heap-sort" },
+              { "glob": "*.js", "input": "src/ds-visuals/min-heap/application/heap-sort", "output": "/ds-visuals/min-heap/application/heap-sort" },
+              { "glob": "*.css", "input": "src/ds-visuals/min-heap/application/heap-sort", "output": "/ds-visuals/min-heap/application/heap-sort" },
+
+              { "glob": "*.html", "input": "src/ds-visuals/min-heap/application/heap-sort/code", "output": "/ds-visuals/min-heap/application/heap-sort/code" },
+              { "glob": "*.c", "input": "src/ds-visuals/min-heap/application/heap-sort/code", "output": "/ds-visuals/min-heap/application/heap-sort/code" },
+              { "glob": "*.java", "input": "src/ds-visuals/min-heap/application/heap-sort/code", "output": "/ds-visuals/min-heap/application/heap-sort/code" },
+              { "glob": "*.py", "input": "src/ds-visuals/min-heap/application/heap-sort/code", "output": "/ds-visuals/min-heap/application/heap-sort/code" },
+
+              //snippets
+              { "glob": "*.c", "input": "src/ds-visuals/snippets/binary-search", "output": "/snippets/binary-search" },
+              { "glob": "*.java", "input": "src/ds-visuals/snippets/binary-search", "output": "/snippets/binary-search" }, 
+
+              { "glob": "*.c", "input": "src/ds-visuals/snippets/max-heap", "output": "/snippets/max-heap" }, 
+              { "glob": "*.c", "input": "src/ds-visuals/snippets/min-heap", "output": "/snippets/min-heap" }, 
+              { "glob": "*.c", "input": "src/ds-visuals/snippets/queue", "output": "/snippets/queue" }, 
+              { "glob": "*.c", "input": "src/ds-visuals/snippets/stack", "output": "/snippets/stack" }, 
+              { "glob": "*.c", "input": "src/ds-visuals/snippets/tree", "output": "/snippets/tree" }, 
+
+              { "glob": "*.c", "input": "src/ds-visuals/snippets/quick-sort", "output": "/snippets/quick-sort" }, 
+
+              
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "tsconfig.app.json",
+              "tsconfig.spec.json",
+              "e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "e2e/protractor.conf.js",
+            "devServerTarget": "ds-visualisations:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ds-visualisations:serve:production"
+            }
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ds-visualisations",
+  "cli": {
+    "analytics": false
+  }
+}

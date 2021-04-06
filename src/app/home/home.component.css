@@ -1,0 +1,16 @@
+.fill{
+	flex: 1 1 auto;
+	text-align: center;	
+}
+
+.head{
+	width: 100%;
+	height: 70%;
+	margin-bottom: 10px;
+	border-radius: 0.25rem;
+}
+
+ button{
+ 	font-family: "Poppins", sans-serif;
+	font-weight: 400;
+ }
