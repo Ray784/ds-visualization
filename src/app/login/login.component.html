@@ -1,0 +1,19 @@
+<br>
+<br>
+<div class = "card center-screen">
+	<div class="error-card" *ngIf="loginStatusExist"><mat-error>{{loginStatus}}</mat-error></div>
+	<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+		<h2>Admin login</h2>
+		<mat-form-field class="center">
+			<mat-label class="label">Username</mat-label>
+			<input class="text" formControlName="username" matInput>
+		</mat-form-field>
+		
+		<mat-form-field class="center">
+			<mat-label class="label">Password</mat-label>
+			<input class="text" matInput type="password" formControlName="password"> 
+		</mat-form-field>
+
+		<button type="submit" mat-raised-button color="primary">Login</button>
+	</form>
+</div>

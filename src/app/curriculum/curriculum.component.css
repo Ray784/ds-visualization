@@ -1,0 +1,38 @@
+.card{
+	margin: 0 auto;
+	align-items: center;
+}
+
+mat-panel-title, mat-panel-description, h3, p{
+	font-family: "Poppins", sans-serif;
+	font-weight: 400;
+	line-height: 1.2;
+	margin: 0.75rem;
+}
+
+a{
+	color: white;
+	margin: 10px;
+	font-family: "Poppins", sans-serif;
+	font-weight: 400;
+}
+
+.content{
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	padding: 0.75rem;
+	line-height: 1;
+	word-wrap: break-word;
+	width: 100%; 
+}
+
+img{
+	height: 100px;
+	width: 100px;
+	margin-left: 0.75rem;
+	padding: 0.75rem;
+	padding-bottom: 0;
+	border-radius: 0;
+	object-fit: cover;
+	float: left;
+}

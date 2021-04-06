@@ -1,0 +1,12 @@
+<div class="outer" *ngFor="let blog of blogs">
+	<div class="card">
+		<p class="title text">{{blog.title}}</p>
+		<p class="subtitle text">written by {{blog.author}}, last edited {{time(blog.time_stamp)}}</p>
+		<p class="text" [innerHTML]="blog.body"></p>
+		<p class="text" [innerHTML]="blog.footer"></p>
+	</div>
+</div>
+
+<div  class="center-screen" *ngIf="isLoading">
+	<mat-spinner></mat-spinner>
+</div>

@@ -1,0 +1,50 @@
+<div *ngIf="!editing && !isLoading">
+	<div class="outer" *ngFor="let blog of blogs">
+		<div class="card">
+			<p class="title text">{{blog.title}}</p>
+			<p class="subtitle text">written by {{blog.author}}, last edited {{time(blog.time_stamp)}}</p>
+			<p class="text" [innerHTML]="blog.body"></p>
+			<p class="text" [innerHTML]="blog.footer"></p>
+			<p>
+				<button mat-raised-button color="primary" (click)="edit(blog)">Edit</button>
+				<button mat-raised-button color="primary" (click)="delete(blog)">Delete</button>
+			</p>
+		</div>
+	</div>
+
+	<div class="outer" *ngIf="!isLoading">
+		<button class="center" mat-raised-button color="primary" (click)="newBlog()">write a new blog</button>
+	</div>
+</div>
+
+<div  class="center-screen" *ngIf="isLoading">
+	<mat-spinner></mat-spinner>
+</div>
+<br>
+<div class = "card" *ngIf="editing">
+	<form [formGroup]="blogEditForm" (ngSubmit)="saveChanges()">
+		<h2>{{edit_type}} Blog</h2>
+		<mat-form-field class="center">
+			<mat-label class="label">Title (do not use html tags)</mat-label>
+			<input matInput required class="text" formControlName="title">
+		</mat-form-field>
+		
+		<mat-form-field class="center">
+			<mat-label class="label">Author (do not use html tags)</mat-label>
+			<input matInput required class="text" type="text" formControlName="author"> 
+		</mat-form-field>
+
+		<mat-form-field style="width: 100%;">
+		    <mat-label>Blog Body (html tags allowed)</mat-label>
+		    <textarea matInput required formControlName="body" class="text" rows="10"></textarea>
+		</mat-form-field>
+
+		<mat-form-field style="width: 100%;">
+			<mat-label class="label">Footer</mat-label>
+			<textarea matInput formControlName="footer" class="text" rows="10"></textarea>
+		</mat-form-field>
+
+		<button type="submit" mat-raised-button color="primary" >Save Changes</button>
+	</form>
+</div>
+

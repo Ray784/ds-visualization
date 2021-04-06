@@ -1,0 +1,34 @@
+<mat-grid-list [cols]="colNums">
+	<mat-grid-tile>
+		<div class="card">
+			<img class="head" [defaultImage] = "blurImages[0]" [lazyLoad]="images[0]">
+			<div class="title text">Curicullum</div>
+			<div class="subtitle text">Education is the passport to better future!</div>
+			<button mat-raised-button color="primary" [routerLink]="['/curriculum']" >Check it out!</button>
+		</div>
+	</mat-grid-tile>
+	<mat-grid-tile *ngIf="show">
+		<div class="card">
+			<img class="head" [defaultImage] = "blurImages[1]" [lazyLoad]="images[1]">
+			<div class="title text">DS Visualisations</div>
+			<div class="subtitle text">Smart data structures + good code = Awesome!</div>
+			<a mat-raised-button color="primary" href="./ds-visuals/" >Check it out!</a>
+		</div>
+	</mat-grid-tile>
+	<mat-grid-tile *ngIf="!show">
+		<div class="card">
+			<img class="head" [defaultImage] = "blurImages[1]" [lazyLoad]="images[1]">
+			<div class="title text">Data Structures</div>
+			<div class="subtitle text">Smart data structures + good code = Awesome!</div>
+			<a mat-raised-button color="primary" href="./ds-visuals/mobile/" >Check it out!</a>
+		</div>
+	</mat-grid-tile>
+	<mat-grid-tile>
+		<div class="card">
+			<img class="head" [defaultImage] = "blurImages[2]" [lazyLoad]="images[2]">
+			<div class="title text">Interview Preparation</div>
+			<div class="subtitle text">You get one chance!</div>
+			<button mat-raised-button color="primary" [routerLink]="['/interview']" >Check it out!</button>
+		</div>
+	</mat-grid-tile>
+</mat-grid-list>

@@ -1,0 +1,47 @@
+<br>
+<br>
+<div class="card">
+	<span class="title text">Content to help you with interview preparation</span>
+	<br>
+	<mat-accordion>
+		<mat-expansion-panel *ngFor="let resource of resources">
+			<mat-expansion-panel-header>
+				<mat-panel-title>
+					{{resource.title}}
+				</mat-panel-title>
+				<mat-panel-description *ngIf="show">
+					{{resource.subtitle}}
+				</mat-panel-description>
+			</mat-expansion-panel-header>
+			<div>
+				<div *ngFor="let link of resource.resource">
+					<img src="assets/logo/{{link.avatar}}"> 
+					<div class="content">
+						<h3>{{link.desp}}</h3>
+						<a mat-raised-button href="{{link.link}}" target="_blank" style=" background-color: {{link.color}}"> Click Here! </a>
+					</div>
+				</div>
+			</div>
+		</mat-expansion-panel>
+		<mat-expansion-panel>
+			<mat-expansion-panel-header>
+				<mat-panel-title>
+					Books
+				</mat-panel-title>
+				<mat-panel-description *ngIf="show">
+					Books to help you with preparing for interviews
+				</mat-panel-description>
+			</mat-expansion-panel-header>
+			<div class = "content">
+				<div *ngFor="let book of book_links">
+					<img src="assets/book-prev/{{book.prev}}.jpg"> 
+					<div class="content">
+						<h3>{{book.desp}}</h3>
+						<a mat-raised-button href="{{book.link}}" target="_blank" color="primary"> Buy </a>
+						<a mat-raised-button href="assets/book/{{book.desp}}.pdf" target="_blank" color="primary"> Pdf <font *ngIf="show">Download!</font> </a>
+					</div>
+				</div>
+			</div>
+	</mat-expansion-panel>
+	</mat-accordion>
+</div>

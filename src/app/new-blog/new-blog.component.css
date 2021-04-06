@@ -1,0 +1,34 @@
+.outer{
+	margin: 20px;
+	padding: 10px;
+}
+.card{
+	margin: 0 auto;
+}
+
+.center-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 90%;
+}
+
+.mat-spinner::ng-deep circle {
+  stroke: #1E88E5;
+}
+
+.center{
+  display: block;
+  margin: 0 auto;
+}
+
+button{
+  width: 200px;
+  margin-right: 20px;
+}
+
+.text{
+  color: black;
+}
